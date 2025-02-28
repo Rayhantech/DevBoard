@@ -15,6 +15,19 @@ function generateRandomColor(){
 }
 
 
+
+function dateAndDays(){
+    let now = new Date();
+
+    let options = { weekday: "long", year:"numeric", month:"long", day: "numeric"};
+    let formattedDate = now.toLocaleDateString("en-US", options);
+
+    document.getElementById("date-section").innerText = formattedDate;
+
+}
+let result = dateAndDays()
+console.log(result)
+
 document.getElementById("mobile-btn").addEventListener("click",function(event){
     event.preventDefault();
     alert("Board Updated Successfully...")
